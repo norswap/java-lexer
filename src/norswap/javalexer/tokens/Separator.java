@@ -10,31 +10,31 @@ public final class Separator extends Token
     /**
      * The string value of the separator (e.g. ",").
      */
-    public final String value;
+    public final String name;
 
     // ---------------------------------------------------------------------------------------------
 
-    public Separator (String value) {
-        this.value = value;
+    public Separator (String name) {
+        this.name = name;
     }
 
     // ---------------------------------------------------------------------------------------------
 
     @Override public int hashCode() {
-        return 1777 + value.hashCode();
+        return 1777 + name.hashCode();
     }
 
     // ---------------------------------------------------------------------------------------------
 
     @Override public boolean equals (Object other) {
         return other instanceof Separator
-            && value.equals(((Separator) other).value);
+            && name.equals(((Separator) other).name);
     }
 
     // ---------------------------------------------------------------------------------------------
 
     @Override public String toString() {
-        return "Sep<" + value + ">";
+        return "Sep<" + name + ">";
     }
 
     // ---------------------------------------------------------------------------------------------
